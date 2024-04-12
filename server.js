@@ -130,3 +130,8 @@ app.post('/signup', async(req,res) => {
     })
     res.redirect('/list/1')
 })
+
+app.get('/user_info', async(req,res) => {
+    let result = await db.collection('user').findOne({ _id : new ObjectId(req.user.id)})
+    res.render('user_info.ejs',{result : result})
+})
