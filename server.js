@@ -8,11 +8,11 @@ const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt')
 const MongoStore = require('connect-mongo')
 
-const uri = "mongodb+srv://admin:1q2w3e4r@cluster0.jeumckw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = "-------";
 
 app.use(express.static('public'));
 app.use(session({
-    secret: '1q2w3e4r',
+    secret: '------',
     resave: false,
     saveUninitialized : false,
     cookie: {maxAge: 60 * 60 * 1000},
